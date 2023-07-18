@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+.welcoming-merchant {
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  padding: 1rem;
+}
+
+.form-part-in-middle {
+  position: relative;
+  background-color: white;
+  border: #f583d8 2px solid;
+  display: block;
+  padding: 2rem;
+  border-radius: 5px;
+  margin: 5% 30% 40% 30%;
+}
+
+label {
+  font-weight: 800;
+  font: bold;
+  font-family: "Franklin Gothic Medium";
+  color: black;
+  padding: 2rem 0rem;
+}
+
+.userinput {
+  width: 90%;
+  background-color: white;
+  padding: 0.8rem;
+  height: auto;
+  border-radius: 10px;
+  color: black;
+  border: #f583d98d 2px solid;
+}
+
+.province-selection {
+  width: 95%;
+  background-color: white;
+  padding: 0.8rem;
+  height: auto;
+  border-radius: 10px;
+  color: black;
+  border: #f583d8 2px solid;
+}
+
+.check-event-material {
+  margin: 0.6rem;
+}
+
+.all-events {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+
+.next-page {
+  background-color: #f583d8;
+  position: relative;
+  padding: 1em;
+  border-radius: 10px;
+  width: 90px;
+  margin-left: 85%;
+}
+
+.heading-of-the-data {
+  color: #f583d8;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.data-section {
+  margin-top: 1rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.actual-data {
+  margin-bottom: 0.5rem;
+}
