@@ -86,7 +86,23 @@ label {
   padding: 1rem;
   border-radius: 5px;
 }
+.gender-selection{
+  position: relative;
+  margin:1rem 0.2rem;
+  
+}
 
 .actual-data {
   margin-bottom: 0.5rem;
+}
+.submit-button{
+background-color: #f583d8;
+width: 80px;
+padding: 0.5rem;
+}
+.error-message{
+  color: red;
+  width: auto;
+  margin: 1rem 0rem;
+
 }
