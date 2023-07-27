@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Merchant Registration Form</title>
+  </head>
+
+  <body>
+    <div class="welcoming-merchant">
+      <h2>
+        Welcome To our Platform, You can register now and start renting your
+        events materials
+      </h2>
+    </div>
+    <div class="form-part-in-middle">
+      <form id="registration-form">
+        <label for="FirstName">FirstName</label>
+        <input
+          name="FirstName"
+          class="userinput"
+          type="text"
+          required
+          placeholder="Enter Your FirstName"
+        />
+        <br /><br />
+        <label for="name">LastName</label>
+        <input
+          class="userinput"
+          type="text"
+          name="LastName"
+          required
+          placeholder="Enter Your LastName"
+        />
+        <br /><br />
+        <label for="name">Email ID</label>
+        <input
+          class="userinput"
+          type="email"
+          name="Email"
+          required
+          placeholder="Enter Your Email address"
+        />
+        <br /><br />
+        <label for="name">Permanent Address</label>
+        <select
+          class="province-selection"
+          name="Province"
+          id="merchant-province"
+        >
+          <option value="No option"></option>
+          <option value="Kigali city">Kigali city</option>
+          <option value="Western Province">Western Province</option>
+          <option value="Eastern Province">Eastern Province</option>
+          <option value="Northern Province">Northern Province</option>
+          <option value="Southern Province">Southern Province</option>
+        </select>
+        <br /><br />
+        <label for="District"> District</label>
+        <input
+          class="userinput"
+          type="text"
+          name="District"
+          required
+          placeholder="Enter Your District"
+        />
+        <br /><br />
+        <label for="sector">Sector</label>
+        <input
+          class="userinput"
+          type="text"
+          name="Sector"
+          required
+          placeholder="Enter Your Sector"
+        />
+        <br /><br />
+        <label for="Cell">Cell</label>
+        <input
+          class="userinput"
+          type="text"
+          name="Cell"
+          placeholder="Enter Your Cell"
+        />
+        <br /><br />
+        <label for="Village">Village</label>
+        <input
+          class="userinput"
+          type="text"
+          name="Village"
+          placeholder="Enter Your Village"
+        />
+        <br /><br />
+
+        <label for="category-of-materials"> Which Materials do you rent?</label>
+        <br /><br />
+        <div class="all-events">
+          <div>
+            <input
+              class="check-event-material"
+              type="checkbox"
+              name="birthday-materials"
+              id="birthdays"
+            />Birthday Materials <br />
+            <input
+              class="check-event-material"
+              type="checkbox"
+              name="birthday-materials"
+              id="Wedding Materials"
+            />Wedding Materials <br />
+            <input
+              class="check-event-material"
+              type="checkbox"
+              name="birthday-materials"
+              id="birthdays"
+            />Church Services Materials <br />
+            <input
+              class="check-event-material"
+              type="checkbox"
+              name="birthday-materials"
+              id="birthdays"
+            />Meetings Materials <br />
+            <input
+              class="check-event-material"
+              type="checkbox"
+              name="birthday-materials"
+              id="birthdays"
+            />Fundraising Materials <br />
+            <input
+              class="check-event-material"
+              type="checkbox"
+              name="birthday-materials"
+              id="birthdays"
+            />Concert Materials <br />
+            <br />
+          </div>
+        </div>
+        <input type="submit" submit />
+        <div id="form-data-container"></div>
+        <ol>
+          <li></li>
+        </ol>
+      </form>
+    </div>
+  </body>
+  <script src="js/registerValidation.js"></script>
+</html>
