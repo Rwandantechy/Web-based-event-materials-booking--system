@@ -5,52 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Merchant Registration Form</title>
+    <title>Merchant Registration</title>
+    <script defer src="js/merchantRegsiterValidations.js"></script>
+    </script>
   </head>
 
   <body>
-    <div class="welcoming-merchant">
-      <h2>
-        Welcome To our Platform, You can register now and start renting your
-        events materials
-      </h2>
-    </div>
+    <h1 class="welcoming-merchant">
+      You can register now and connect to your potential clients.
+    </h1>
+
     <div class="form-part-in-middle">
-      <form id="registration-form">
+      <form id="registration-form" method="post" autocomplete="on" name="form1">
         <label for="FirstName">FirstName</label>
         <input
           name="FirstName"
+          id="firstname"
           class="userinput"
           type="text"
           required
+          pattern="[a-zA-Z]{2,30}"
+          title="The FirstName is not correct"
           placeholder="Enter Your FirstName"
         />
+        <span class="error-message" id="firstname-error"></span>
         <br /><br />
-        <label for="name">LastName</label>
+        <label for="LastName">LastName</label>
         <input
           class="userinput"
           type="text"
+          id="lastname"
+          pattern="[a-zA-Z]{2,30}"
           name="LastName"
           required
+          title="The FirstName is not correct"
           placeholder="Enter Your LastName"
         />
+        <span class="error-message" id="lastname-error"></span>
         <br /><br />
-        <label for="name">Email ID</label>
+        <label for="email">Email ID</label>
         <input
           class="userinput"
           type="email"
           name="Email"
+          pattern="[a-zA-Z0-9._\-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+          id="email"
           required
+          title="The FirstName is not correct"
           placeholder="Enter Your Email address"
         />
+        <span class="error-message" id="email-error"></span>
         <br /><br />
-        <label for="name">Permanent Address</label>
+        <label for="phone-number">Phone Number</label> <br />
+        <input
+          type="text"
+          name="phone"
+          class="userinput"
+          id="numberphone"
+          required
+          pattern="[0-9]{10}"
+          placeholder=" like: 0789791255"
+          title="The FirstName is not correct"
+        />
+        <span class="error-message" id="numberphone-error"></span>
+        <br />
+        <br />
+
+        <label for="dateofbirth">Date of Birth</label>
+        <input type="date" name="dob" required id="dob" class="userinput" />
+        <br /><br />
+
+        <label for="gender">Gender</label> <br />
+        <input
+          type="radio"
+          name="gender"
+          class="gender-selection"
+          value="male"
+          id="male"
+          required
+        />
+        Male <br />
+        <input
+          type="radio"
+          name="gender"
+          class="gender-selection"
+          id="female"
+          value="female"
+        />
+        Female <br />
+        <input
+          type="radio"
+          name="gender"
+          id="other"
+          class="gender-selection"
+          value="other"
+        />
+        Other <br /><br />
+
+        <label for="Permanentaddress">Permanent Address</label>
         <select
           class="province-selection"
-          name="Province"
+          name="Province"        
           id="merchant-province"
+          required
         >
-          <option value="No option"></option>
+          <option value="">Select a Province</option>
           <option value="Kigali city">Kigali city</option>
           <option value="Western Province">Western Province</option>
           <option value="Eastern Province">Eastern Province</option>
@@ -58,39 +117,56 @@
           <option value="Southern Province">Southern Province</option>
         </select>
         <br /><br />
-        <label for="District"> District</label>
+
+        <label for="District">District</label>
         <input
           class="userinput"
           type="text"
           name="District"
+          id="district"
+          pattern="[a-zA-Z ]+"
           required
+          title="The FirstName is not correct"
           placeholder="Enter Your District"
         />
+        <span class="error-message" id="district-error"></span>
         <br /><br />
         <label for="sector">Sector</label>
         <input
           class="userinput"
           type="text"
           name="Sector"
+          id="sector"
+          pattern="[a-zA-Z ]+"
           required
+          title="The FirstName is not correct"
           placeholder="Enter Your Sector"
         />
+        <span class="error-message" id="sector-error"></span>
         <br /><br />
         <label for="Cell">Cell</label>
         <input
           class="userinput"
           type="text"
           name="Cell"
+          id="cell"
+          pattern="[a-zA-Z ]+"
+          title="The FirstName is not correct"
           placeholder="Enter Your Cell"
         />
+        <span class="error-message" id="cell-error"></span>
         <br /><br />
         <label for="Village">Village</label>
         <input
           class="userinput"
           type="text"
           name="Village"
+          id="village"
+          title="The FirstName is not correct"
+          pattern="[a-zA-Z ]+"
           placeholder="Enter Your Village"
         />
+        <span class="error-message" id="village-error"></span>
         <br /><br />
 
         <label for="category-of-materials"> Which Materials do you rent?</label>
@@ -101,48 +177,43 @@
               class="check-event-material"
               type="checkbox"
               name="birthday-materials"
-              id="birthdays"
+              id="birthday-materials"
             />Birthday Materials <br />
             <input
               class="check-event-material"
               type="checkbox"
               name="birthday-materials"
-              id="Wedding Materials"
+              id="Weddingmaterial"
             />Wedding Materials <br />
             <input
               class="check-event-material"
               type="checkbox"
               name="birthday-materials"
-              id="birthdays"
+              id="churchmaterials"
             />Church Services Materials <br />
             <input
               class="check-event-material"
               type="checkbox"
               name="birthday-materials"
-              id="birthdays"
+              id="meetingmaterials"
             />Meetings Materials <br />
             <input
               class="check-event-material"
               type="checkbox"
               name="birthday-materials"
-              id="birthdays"
+              id="fundraisingmaterials"
             />Fundraising Materials <br />
             <input
               class="check-event-material"
               type="checkbox"
               name="birthday-materials"
-              id="birthdays"
+              id="Concertmaterials"
             />Concert Materials <br />
             <br />
           </div>
         </div>
-        <input type="submit" submit />
-        <div id="form-data-container"></div>
-        <ol>
-          <li></li>
-        </ol>
-      </form>
+        <button class="submit-button" type="submit">SUBMIT</button>
+        </form>
     </div>
   </body>
-  <script src="js/registerValidation.js"></script>
 </html>
